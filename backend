@@ -2,5 +2,16 @@ basic to advanced
   the big picture - frontend (react next.js HTML) +backend (node js expressjs ) +database (mongoDB Postgres)
   do u need a custom backend (superbase / firebase), 
   server ( RUNS 24/7 localhost +liveURL)  +nodejs (handles both front+back, perfect for APIservers &real time apps) +express(framework.neat structure), 
-  APIs, endpoints&webhooks,database+env_variable,
+  APIs-u ask (HTTP Methods GET,POST..), endpoint(API call as an addess,endpoint URL in structure json)& webhooks-they tell u(posttrequest,notification),
+  https://app.yourapp.com    /users   /42    ?format json
+    Base URL                 Route     ID     Query param
+
+ params & body
+            path params                            query  params                           request body
+            /users/:id                             /users?city=delhi                       data sent inside the request
+
+database+env_variable(api keys stored),
+ db    sql-relation with tables(postgressql,mysql)     nosql-with json(mongodb)
+
+
   security-full coverage, error handling, logging&monitoring , deployment-localhost to live, building with ai- the vibe code way
