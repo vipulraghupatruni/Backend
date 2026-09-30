@@ -15,3 +15,14 @@ database+env_variable(api keys stored),
 
 
   security-full coverage, error handling, logging&monitoring , deployment-localhost to live, building with ai- the vibe code way
+
+
+
+sudo dnf install mysql-community-server -y --nogpgcheck
+
+# Start the engine
+sudo systemctl start mysqld
+# Configure MySQL to launch automatically on server reboots
+sudo systemctl enable mysqld
+
+sudo systemctl status mysqld
