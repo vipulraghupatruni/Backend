@@ -26,3 +26,54 @@ sudo systemctl start mysqld
 sudo systemctl enable mysqld
 
 sudo systemctl status mysqld
+
+#mysql 
+mysql -h change-to-your-RDS-ENDPOINT -u change-to-user-name -p
+
+
+mysql -h database-1-instance-1.cfgay60q2gpr.eu-west-1.rds.amazonaws.com -u admin -p
+
+
+
+
+CREATE TABLE IF NOT EXISTS transactions (
+    id INT NOT NULL AUTO_INCREMENT, 
+    amount DECIMAL(10,2), 
+    description VARCHAR(100), 
+    PRIMARY KEY(id)
+);
+
+INSERT INTO transactions (amount,description) VALUES ('400','groceries');
+
+SELECT * FROM transactions
+
+
+======================================================================
+NVM -node
+======================================================================
+wget -qO- https://githubusercontent.com | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+nvm install --lts
+
+node -v
+npm -v
+nvm -v
+
+nvm use 24.21.0
+
+npm install -g pm2
+
+cd ~
+mkdir app-tier
+cd app-tier
+
+aws s3 cp s3://aws-three-tier-arch/app-tier/ . --recursive
+
+pm2 start index.js
+pm2 list
+pm2 logs
+
