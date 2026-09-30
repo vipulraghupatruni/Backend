@@ -81,3 +81,6 @@ pm2 logs
 webserver nginx
 ===================
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+
+aws s3 cp s3://aws-three-tier-arch/web-tier/ web-tier --recursive
